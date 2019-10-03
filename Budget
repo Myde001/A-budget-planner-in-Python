@@ -1,0 +1,17 @@
+
+def budget():
+    item_name = ["Item name"]
+    price = ["C$"]
+    while item_name != []:
+        x = raw_input("Enter the item name: ")
+        y = raw_input("Enter the corresponding price in CAD:")
+        item_name.append(x)
+        price.append(y)
+
+    report = raw_input("Do you want to print class report?: ")
+    if report == 'yes':
+        for i, j in zip(item_name, price):
+            print(i, ':', j)
+
+
+budget()
