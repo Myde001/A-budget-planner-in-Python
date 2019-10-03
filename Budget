@@ -1,17 +1,20 @@
-
 def budget():
-    item_name = ["Item name"]
-    price = ["C$"]
-    while item_name != []:
+    print("An Budget/Expense tracker")
+    item_name = []
+    price = []
+    total = 0
+    while len(item_name) <= 3:
         x = raw_input("Enter the item name: ")
         y = raw_input("Enter the corresponding price in CAD:")
+        y_float = float(y)
         item_name.append(x)
-        price.append(y)
+        price.append(y_float)
+        total = total+y_float
 
     report = raw_input("Do you want to print class report?: ")
     if report == 'yes':
         for i, j in zip(item_name, price):
             print(i, ':', j)
-
+    print("Your total budget is:", total)
 
 budget()
