@@ -6,7 +6,7 @@ def budget():
     while len(item_name) <= 3:
         x = raw_input("Enter the item name: ")
         y = raw_input("Enter the corresponding price in CAD:")
-        y_float = float(y)
+        y_float = float(y)#GUI needed for adding rows
         item_name.append(x)
         price.append(y_float)
         total = total+y_float
@@ -16,5 +16,11 @@ def budget():
         for i, j in zip(item_name, price):
             print(i, ':', j)
     print("Your total budget is:", total)
+    return total, item_name,price
 
 budget()
+
+def expenditure(item_name,price,total):
+    print("Please click to make a withdrawal") #GUI needed to link a new window
+
+
